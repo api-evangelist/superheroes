@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akabab.github.io/superhero-api/api/images-schema.json",
+  "title": "Images",
+  "description": "Multi-resolution image URLs (xs, sm, md, lg) for a character.",
+  "type": "object",
+  "required": ["xs", "sm", "md", "lg"],
+  "properties": {
+    "xs": { "type": "string", "format": "uri" },
+    "sm": { "type": "string", "format": "uri" },
+    "md": { "type": "string", "format": "uri" },
+    "lg": { "type": "string", "format": "uri" }
+  }
+}

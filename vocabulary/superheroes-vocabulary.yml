@@ -1,0 +1,86 @@
+name: Superhero API Vocabulary
+description: Domain vocabulary for the akabab/superhero-api static REST API — comic characters, powerstats, alignment, and publishers.
+url: https://akabab.github.io/superhero-api/api/
+version: '0.3.0'
+
+domains:
+  - name: Comic Characters
+    description: Superheroes and villains drawn from multiple comic universes.
+    terms:
+      - term: Character
+        definition: A single superhero or villain record exposed via /id/{id}.json.
+      - term: Slug
+        definition: URL-safe identifier in `{id}-{name}` form used for image filenames.
+      - term: Publisher
+        definition: Originating publisher of the character (Marvel Comics, DC Comics, etc.).
+      - term: Universe
+        definition: Continuity / multiverse a character belongs to, implied by publisher.
+
+  - name: Powerstats
+    description: Six-axis numeric ranking of a character's capabilities, scored 0-100.
+    terms:
+      - term: Intelligence
+        definition: Reasoning, planning, and tactical capacity.
+      - term: Strength
+        definition: Raw physical power.
+      - term: Speed
+        definition: Movement and reaction velocity.
+      - term: Durability
+        definition: Resistance to damage and ability to keep functioning under stress.
+      - term: Power
+        definition: Magnitude of innate / superhuman ability.
+      - term: Combat
+        definition: Skill in armed and unarmed conflict.
+
+  - name: Alignment
+    description: Moral classification of a character.
+    terms:
+      - term: good
+        definition: Heroic alignment.
+      - term: bad
+        definition: Villainous alignment.
+      - term: neutral
+        definition: Neither overtly heroic nor villainous.
+      - term: '-'
+        definition: Alignment unknown or unspecified.
+
+  - name: Identity
+    description: Identifying attributes of a character.
+    terms:
+      - term: Full Name
+        definition: Real (non-costumed) name.
+      - term: Alter Ego
+        definition: Distinct secondary identity adopted by the character.
+      - term: Alias
+        definition: Other names by which the character is known.
+      - term: First Appearance
+        definition: First published appearance in canonical media.
+
+  - name: Affiliation
+    description: Group, team, and relational affiliations.
+    terms:
+      - term: Group Affiliation
+        definition: Teams, organizations, or factions the character belongs to.
+      - term: Relatives
+        definition: Family connections (spouses, parents, siblings, descendants).
+
+  - name: Surface
+    description: Endpoint and resource shape of the static API.
+    terms:
+      - term: All Endpoint
+        definition: /all.json — single bulk dataset of all characters.
+      - term: Character Endpoint
+        definition: /id/{id}.json — complete record for one character.
+      - term: Property Slice
+        definition: Per-property endpoint (/powerstats, /appearance, /biography, /work, /connections).
+      - term: Image Asset
+        definition: Static JPG at /images/{size}/{slug}.jpg in four sizes (xs, sm, md, lg).
+      - term: jsDelivr Mirror
+        definition: CDN mirror of the same static files at cdn.jsdelivr.net/gh/akabab/superhero-api.
+
+tags:
+  - Games And Comics
+  - Superheroes
+  - Comic Books
+  - Open Source
+  - Static API

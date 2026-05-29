@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akabab.github.io/superhero-api/api/biography-schema.json",
+  "title": "Biography",
+  "description": "Biographical record for a character.",
+  "type": "object",
+  "properties": {
+    "fullName":        { "type": "string" },
+    "alterEgos":       { "type": "string" },
+    "aliases":         { "type": "array", "items": { "type": "string" } },
+    "placeOfBirth":    { "type": "string" },
+    "firstAppearance": { "type": "string" },
+    "publisher":       { "type": "string" },
+    "alignment":       { "type": "string", "enum": ["good", "bad", "neutral", "-"] }
+  }
+}

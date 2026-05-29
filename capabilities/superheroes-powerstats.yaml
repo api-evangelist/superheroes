@@ -1,0 +1,78 @@
+apiVersion: naftiko.io/v1
+kind: Capability
+metadata:
+  name: superheroes-powerstats
+  title: Superhero Powerstats
+  description: Per-character six-axis power, intelligence, and combat scoring.
+  provider: akabab/superhero-api
+  baseURL: https://akabab.github.io/superhero-api/api
+  license: MIT
+  authentication: none
+spec:
+  operations:
+    - id: getCharacterPowerstats
+      method: GET
+      path: /powerstats/{id}.json
+      description: Returns just the powerstats slice for a character.
+      tags: [Powerstats]
+      idempotent: true
+
+    - id: getCharacterAppearance
+      method: GET
+      path: /appearance/{id}.json
+      description: Returns just the appearance slice for a character.
+      tags: [Appearance]
+      idempotent: true
+
+    - id: getCharacterBiography
+      method: GET
+      path: /biography/{id}.json
+      description: Returns just the biography slice for a character.
+      tags: [Biography]
+      idempotent: true
+
+    - id: getCharacterWork
+      method: GET
+      path: /work/{id}.json
+      description: Returns just the work slice for a character.
+      tags: [Work]
+      idempotent: true
+
+    - id: getCharacterConnections
+      method: GET
+      path: /connections/{id}.json
+      description: Returns just the connections slice for a character.
+      tags: [Connections]
+      idempotent: true
+
+  workflows:
+    - id: battle-compare
+      description: Compare two characters head-to-head across the six powerstats axes.
+      steps:
+        - call: getCharacterPowerstats
+          with: { id: "{{input.aId}}" }
+          store: a
+        - call: getCharacterPowerstats
+          with: { id: "{{input.bId}}" }
+          store: b
+        - return:
+            intelligence: "a.intelligence vs b.intelligence"
+            strength: "a.strength vs b.strength"
+            speed: "a.speed vs b.speed"
+            durability: "a.durability vs b.durability"
+            power: "a.power vs b.power"
+            combat: "a.combat vs b.combat"
+
+    - id: trading-card
+      description: Build a compact trading-card payload (powerstats + biography) for a character.
+      steps:
+        - call: getCharacterPowerstats
+          with: { id: "{{input.id}}" }
+          store: stats
+        - call: getCharacterBiography
+          with: { id: "{{input.id}}" }
+          store: bio
+        - return:
+            stats: "stats"
+            publisher: "bio.publisher"
+            alignment: "bio.alignment"

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akabab.github.io/superhero-api/api/character-schema.json",
+  "title": "Character",
+  "description": "A complete superhero or villain record in the akabab/superhero-api dataset.",
+  "type": "object",
+  "required": ["id", "name", "slug", "powerstats", "appearance", "biography", "work", "connections", "images"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1, "maximum": 731 },
+    "name": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[0-9]+-[a-z0-9-]+$" },
+    "powerstats": { "$ref": "superheroes-powerstats-schema.json" },
+    "appearance": { "$ref": "superheroes-appearance-schema.json" },
+    "biography": { "$ref": "superheroes-biography-schema.json" },
+    "work": { "$ref": "superheroes-work-schema.json" },
+    "connections": { "$ref": "superheroes-connections-schema.json" },
+    "images": { "$ref": "superheroes-images-schema.json" }
+  }
+}

@@ -1,0 +1,52 @@
+apiCommonsRateLimits: '0.1'
+provider:
+  id: superheroes
+  name: Superhero API (akabab)
+  url: https://akabab.github.io/superhero-api/api/
+  type: opensource
+
+summary: >-
+  There are no application-level rate limits enforced by the
+  akabab/superhero-api project. All endpoints are static JSON and image
+  files served from GitHub Pages and the jsDelivr CDN. Effective limits
+  are imposed only by the upstream hosting providers' fair-use policies.
+
+policies:
+  - id: github-pages-fair-use
+    scope: origin
+    host: akabab.github.io
+    enforced_by: GitHub Pages
+    description: >-
+      GitHub Pages applies a soft bandwidth limit of approximately 100 GB
+      per month per site and a soft request limit aimed at preventing
+      abuse. Excessive traffic may be throttled or temporarily blocked
+      at GitHub's discretion. No per-key quota — limits are aggregated
+      across all consumers of the site.
+    documented_at: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
+    headers: none
+
+  - id: jsdelivr-fair-use
+    scope: cdn
+    host: cdn.jsdelivr.net
+    enforced_by: jsDelivr
+    description: >-
+      jsDelivr's public CDN has no documented per-IP rate limit but
+      enforces fair-use anti-abuse rules. Single endpoints serving
+      >100 TB/month of traffic may be reviewed. The CDN is the
+      recommended consumption surface for high-volume clients.
+    documented_at: https://www.jsdelivr.com/terms
+    headers: none
+
+guidance:
+  - For high-volume use, consume the dataset via jsDelivr rather than the
+    GitHub Pages origin.
+  - For very high-volume use (e.g. ML training, batch backfills), clone
+    the repository and serve the JSON locally — the entire dataset is
+    a few megabytes.
+  - The endpoints are immutable per release (pinned via the @0.3.0 tag on
+    jsDelivr), so aggressive client-side and CDN caching is safe.
+
+defaults:
+  application_rate_limit: none
+  per_key_rate_limit: not-applicable
+  authentication: none

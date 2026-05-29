@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akabab.github.io/superhero-api/api/appearance-schema.json",
+  "title": "Appearance",
+  "description": "Physical appearance attributes for a character.",
+  "type": "object",
+  "properties": {
+    "gender":    { "type": "string" },
+    "race":      { "type": ["string", "null"] },
+    "height":    { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 2,
+                   "description": "Height pair: imperial then metric (e.g. [\"6'8\", \"203 cm\"])." },
+    "weight":    { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 2,
+                   "description": "Weight pair: imperial then metric (e.g. [\"980 lb\", \"441 kg\"])." },
+    "eyeColor":  { "type": "string" },
+    "hairColor": { "type": "string" }
+  }
+}

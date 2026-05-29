@@ -1,0 +1,44 @@
+apiCommonsPlans: '0.1'
+provider:
+  id: superheroes
+  name: Superhero API (akabab)
+  url: https://akabab.github.io/superhero-api/api/
+  type: opensource
+  license: MIT
+
+summary: >-
+  The akabab/superhero-api is an open-source, MIT-licensed static dataset
+  served from GitHub Pages and the jsDelivr CDN. There are no paid plans,
+  no commercial tiers, no user accounts, and no metered usage. The project
+  is free to consume, fork, mirror, and self-host.
+
+plans:
+  - id: free
+    name: Free / Open Source
+    cost: 0
+    currency: USD
+    billingPeriod: none
+    description: >-
+      All endpoints, all data, all image assets — no key required, no
+      sign-up, no per-request fee. Hosting is donated by GitHub Pages and
+      jsDelivr, both of which apply their own fair-use terms.
+    features:
+      - Unauthenticated GET access to every endpoint
+      - Full /all.json bulk dataset
+      - Per-character and per-property slices
+      - Four image sizes (xs, sm, md, lg) per character
+      - jsDelivr CDN mirror
+      - MIT-licensed source on GitHub — fork and self-host permitted
+    limits:
+      requests: unlimited-per-fair-use
+      throttling: cdn-level-only
+
+notes:
+  - >-
+    The upstream project superheroapi.com (a separate provider) does require
+    a free API token. That provider is profiled separately and is not covered
+    by this plan file.
+  - >-
+    GitHub Pages and jsDelivr have their own bandwidth and abuse policies;
+    high-volume consumers should mirror the dataset locally rather than
+    hammer the public endpoints.

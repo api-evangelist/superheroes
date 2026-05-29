@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akabab.github.io/superhero-api/api/work-schema.json",
+  "title": "Work",
+  "description": "Occupational record for a character.",
+  "type": "object",
+  "properties": {
+    "occupation": { "type": "string" },
+    "base":       { "type": "string" }
+  }
+}

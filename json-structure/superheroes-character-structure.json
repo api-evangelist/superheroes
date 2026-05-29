@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-structure.org/draft/v0.1/schema",
+  "title": "Character",
+  "description": "JSON Structure description of a Superhero API character record. JSON Structure focuses on shape and addressing, complementing the JSON Schema validation contract.",
+  "type": "object",
+  "properties": {
+    "id":          { "type": "integer", "addressable": true, "description": "Primary key, exposed via /id/{id}.json." },
+    "name":        { "type": "string", "description": "Display name." },
+    "slug":        { "type": "string", "description": "URL-safe slug used for image filenames ({id}-{slug-of-name})." },
+    "powerstats":  { "type": "object", "addressable": true, "description": "Reachable individually via /powerstats/{id}.json." },
+    "appearance":  { "type": "object", "addressable": true, "description": "Reachable individually via /appearance/{id}.json." },
+    "biography":   { "type": "object", "addressable": true, "description": "Reachable individually via /biography/{id}.json." },
+    "work":        { "type": "object", "addressable": true, "description": "Reachable individually via /work/{id}.json." },
+    "connections": { "type": "object", "addressable": true, "description": "Reachable individually via /connections/{id}.json." },
+    "images":      { "type": "object", "description": "Image URL bundle; underlying assets at /images/{size}/{slug}.jpg." }
+  },
+  "x-collection": {
+    "description": "Whole dataset reachable as /all.json (731 records).",
+    "endpoint": "/all.json"
+  }
+}

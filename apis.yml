@@ -1,32 +1,209 @@
 aid: superheroes
-name: SuperHeroes
-description: "All SuperHeroes and Villains data from all universes under a single API"
-url: https://superheroapi.com
+name: Superhero API (akabab)
+description: >-
+  Open-source REST API exposing 731 superheroes and villains drawn from
+  multiple comic universes (Marvel, DC, Dark Horse, Image, and more) under
+  a single, unauthenticated JSON surface. The dataset is rebuilt from the
+  original superheroapi.com source, cleaned up, and republished as static
+  JSON files served from GitHub Pages and the jsDelivr CDN. Each character
+  includes powerstats, appearance, biography, work, connections, and a
+  multi-resolution image set.
+url: https://akabab.github.io/superhero-api/api/
 specificationVersion: '0.20'
 created: '2026-05-28'
-modified: '2026-05-28'
+modified: '2026-05-29'
 x-source: public-apis/public-apis
-x-category: "Games & Comics"
+x-type: opensource
+x-category: Games & Comics
 x-tier: 3
 x-tier-reason: bulk-registered-from-public-apis
 tags:
   - Games And Comics
+  - Superheroes
+  - Comic Books
+  - Open Source
+  - Static API
+  - GitHub Pages
   - Public APIs
 apis:
-  - name: SuperHeroes
-    description: "All SuperHeroes and Villains data from all universes under a single API"
-    humanURL: https://superheroapi.com
-    baseURL: https://superheroapi.com
+  - name: Superhero API
+    description: >-
+      The Superhero API is a static JSON REST surface that returns a single
+      consolidated dataset of 731 characters or per-character / per-property
+      records. All responses are pre-built JSON files served from GitHub
+      Pages (akabab.github.io) with a jsDelivr CDN mirror. Endpoints cover
+      the full character record (/id/{id}.json) and individual property
+      slices (powerstats, appearance, biography, work, connections), plus
+      a bulk /all.json file containing every character. A separate image
+      surface serves four sizes (xs, sm, md, lg) per character slug.
+    humanURL: https://akabab.github.io/superhero-api/api/
+    baseURL: https://akabab.github.io/superhero-api/api
     tags:
       - Games And Comics
+      - Superheroes
     properties:
       - type: Documentation
-        url: https://superheroapi.com
+        url: https://akabab.github.io/superhero-api/api/
+      - type: SourceCode
+        url: https://github.com/akabab/superhero-api
+      - type: OpenAPI
+        url: openapi/superheroes-openapi.yml
+      - type: NaftikoCapability
+        url: capabilities/superheroes-characters.yaml
+      - type: NaftikoCapability
+        url: capabilities/superheroes-powerstats.yaml
+      - type: NaftikoCapability
+        url: capabilities/superheroes-images.yaml
 common:
   - type: Website
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+  - type: GitHubOrganization
+    url: https://github.com/akabab
+  - type: License
+    url: https://github.com/akabab/superhero-api/blob/master/LICENSE
+    title: MIT License
+  - type: CDN
+    url: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/
+    title: jsDelivr CDN Mirror
+  - type: OriginalSource
     url: https://superheroapi.com
+    title: superheroapi.com (Original Source)
   - type: PublicAPIsListing
     url: https://github.com/public-apis/public-apis
+  - type: SpectralRules
+    url: rules/superheroes-rules.yml
+  - type: Vocabulary
+    url: vocabulary/superheroes-vocabulary.yml
+  - type: JSONLD
+    url: json-ld/superheroes-context.jsonld
+  - type: JSONSchema
+    url: json-schema/superheroes-character-schema.json
+    title: Character
+  - type: JSONSchema
+    url: json-schema/superheroes-powerstats-schema.json
+    title: Powerstats
+  - type: JSONSchema
+    url: json-schema/superheroes-appearance-schema.json
+    title: Appearance
+  - type: JSONSchema
+    url: json-schema/superheroes-biography-schema.json
+    title: Biography
+  - type: JSONSchema
+    url: json-schema/superheroes-work-schema.json
+    title: Work
+  - type: JSONSchema
+    url: json-schema/superheroes-connections-schema.json
+    title: Connections
+  - type: JSONSchema
+    url: json-schema/superheroes-images-schema.json
+    title: Images
+  - type: JSONStructure
+    url: json-structure/superheroes-character-structure.json
+    title: Character
+  - type: Example
+    url: examples/superheroes-character-example.json
+    title: Character Example
+  - type: Example
+    url: examples/superheroes-all-example.json
+    title: All Characters Example
+  - type: Example
+    url: examples/superheroes-powerstats-example.json
+    title: Powerstats Example
+  - type: RateLimits
+    url: rate-limits/superheroes-rate-limits.yml
+  - type: Plans
+    url: plans/superheroes-plans-pricing.yml
+features:
+  - name: Bulk Character Dataset
+    description: >-
+      The /all.json endpoint returns all 731 character records in a single
+      response — ideal for clients that want to load and cache the dataset
+      once and query it locally.
+  - name: Per-Character Records
+    description: >-
+      The /id/{id}.json endpoint returns a complete record for a single
+      character keyed by numeric id (1..731).
+  - name: Per-Property Slices
+    description: >-
+      Property-specific endpoints (/powerstats, /appearance, /biography,
+      /work, /connections) return just one sub-document, which lets
+      bandwidth-sensitive clients fetch only what they need.
+  - name: Multi-Resolution Images
+    description: >-
+      Each character has four image sizes — xs, sm, md, lg — keyed by the
+      character slug (e.g. `1-a-bomb.jpg`), served as static JPGs from
+      GitHub Pages and jsDelivr.
+  - name: Powerstats Scoring
+    description: >-
+      Every character has a six-axis powerstats vector — intelligence,
+      strength, speed, durability, power, combat — scored 0-100, suitable
+      for ranking, filtering, and comparison.
+  - name: Alignment Classification
+    description: >-
+      Each biography includes an alignment tag (good, bad, neutral) so
+      clients can split the catalog into heroes, villains, and antiheroes.
+  - name: Cross-Publisher Coverage
+    description: >-
+      The dataset spans Marvel Comics, DC Comics, Dark Horse Comics, Image
+      Comics, Wildstorm, Star Trek, IDW, Sony Pictures, Universal Studios,
+      and several other publishers — accessible via the biography.publisher
+      field.
+  - name: No Authentication
+    description: >-
+      All endpoints are unauthenticated GETs. No API key, OAuth, or
+      account sign-up is required, in contrast with the upstream
+      superheroapi.com which requires a free token.
+  - name: CDN-Backed Static JSON
+    description: >-
+      Files are pre-built and served from GitHub Pages with a jsDelivr CDN
+      mirror, so clients get edge-cached responses with no origin server
+      to rate-limit them.
+  - name: Open Source Dataset
+    description: >-
+      The full builder pipeline, sources, and images are MIT-licensed on
+      GitHub, so the dataset can be forked, augmented, and redeployed.
+useCases:
+  - name: Frontend Tutorial Fixture
+    description: >-
+      Zero-friction REST API used in JavaScript / React / Vue tutorials
+      to demonstrate fetch, list rendering, image loading, and detail
+      pages without bringing up a backend.
+  - name: Game and Battle Simulators
+    description: >-
+      The powerstats vector is widely used to build superhero battle
+      simulators, top-trumps style card games, and ranking experiments.
+  - name: Data Visualization Demos
+    description: >-
+      Cross-publisher, multi-axis powerstats data is a common dataset for
+      D3, Observable, and Tableau tutorials showing radar charts,
+      scatter plots, and comparative analytics.
+  - name: Machine Learning Toy Dataset
+    description: >-
+      Small (731-row), well-structured, mixed-type dataset useful for
+      teaching classification (alignment), regression (powerstats), and
+      embedding (text fields like aliases and connections).
+  - name: Chatbot and LLM Demos
+    description: >-
+      Used as a stable JSON corpus for retrieval-augmented chatbots and
+      agent demos that answer "who is X?" or "compare X vs Y" questions.
+  - name: Mobile App Sample Data
+    description: >-
+      iOS and Android tutorials use the character + image surface as a
+      ready-made backend for list/detail UX patterns.
+integrations:
+  - name: GitHub Pages
+    description: Origin host for the static JSON files and image assets.
+  - name: jsDelivr CDN
+    description: Public CDN mirror at cdn.jsdelivr.net/gh/akabab/superhero-api for faster delivery.
+  - name: superheroapi.com (Upstream)
+    description: Original community dataset cleaned and republished by the akabab project.
+solutions:
+  - name: Public-APIs Catalog Entry
+    description: Registered in the community-maintained public-apis directory under Games & Comics.
+  - name: Free Tutorial Backend
+    description: Frequently recommended as a no-key REST API for tutorial and bootcamp curricula.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

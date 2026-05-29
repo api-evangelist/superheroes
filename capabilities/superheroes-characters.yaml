@@ -1,0 +1,46 @@
+apiVersion: naftiko.io/v1
+kind: Capability
+metadata:
+  name: superheroes-characters
+  title: Superhero Characters
+  description: List, fetch, and explore the 731-character superhero dataset.
+  provider: akabab/superhero-api
+  baseURL: https://akabab.github.io/superhero-api/api
+  license: MIT
+  authentication: none
+spec:
+  operations:
+    - id: listAllCharacters
+      method: GET
+      path: /all.json
+      description: Returns every character record in the dataset.
+      tags: [Characters]
+      pagination: none
+      idempotent: true
+
+    - id: getCharacterById
+      method: GET
+      path: /id/{id}.json
+      description: Returns the complete record for one character.
+      tags: [Characters]
+      parameters:
+        - name: id
+          in: path
+          type: integer
+          range: [1, 731]
+      idempotent: true
+
+  workflows:
+    - id: catalog-warmup
+      description: Pull /all.json once at startup, then resolve character lookups locally.
+      steps:
+        - call: listAllCharacters
+          store: catalog
+        - reference: "catalog[id == ?].name"
+
+    - id: detail-lookup
+      description: Resolve a single character on demand without caching the full catalog.
+      steps:
+        - call: getCharacterById
+          with:
+            id: "{{input.id}}"

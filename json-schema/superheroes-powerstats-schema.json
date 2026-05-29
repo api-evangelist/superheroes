@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akabab.github.io/superhero-api/api/powerstats-schema.json",
+  "title": "Powerstats",
+  "description": "Six-axis powerstats vector. Each axis is scored 0-100, or null when unknown.",
+  "type": "object",
+  "properties": {
+    "intelligence": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+    "strength":     { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+    "speed":        { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+    "durability":   { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+    "power":        { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
+    "combat":       { "type": ["integer", "null"], "minimum": 0, "maximum": 100 }
+  }
+}
