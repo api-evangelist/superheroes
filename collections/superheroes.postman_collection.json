@@ -1,0 +1,940 @@
+{
+  "item": [
+    {
+      "id": "1399c3f9-8f66-4e49-b0d1-339c69aabc88",
+      "name": "Characters",
+      "description": {
+        "content": "Full character records and the consolidated dataset.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0f6356eb-3827-44fa-be86-1516721e23e0",
+          "name": "List All Characters",
+          "request": {
+            "name": "List All Characters",
+            "description": {
+              "content": "Returns every character record in the dataset as a single JSON array of 731 entries.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "all.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1ed319c0-2d4f-4990-9872-a9bea2d88e93",
+              "name": "A JSON array of all character records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "all.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"A-Bomb\",\n    \"slug\": \"1-a-bomb\",\n    \"powerstats\": {\n      \"intelligence\": 15,\n      \"strength\": 52,\n      \"speed\": 93,\n      \"durability\": 79,\n      \"power\": 81,\n      \"combat\": 45\n    },\n    \"appearance\": {\n      \"gender\": \"string\",\n      \"race\": \"string\",\n      \"height\": [\n        \"6'8\",\n        \"203 cm\"\n      ],\n      \"weight\": [\n        \"980 lb\",\n        \"441 kg\"\n      ],\n      \"eyeColor\": \"string\",\n      \"hairColor\": \"string\"\n    },\n    \"biography\": {\n      \"fullName\": \"string\",\n      \"alterEgos\": \"string\",\n      \"aliases\": [\n        \"string\",\n        \"string\"\n      ],\n      \"placeOfBirth\": \"string\",\n      \"firstAppearance\": \"string\",\n      \"publisher\": \"string\",\n      \"alignment\": \"good\"\n    },\n    \"work\": {\n      \"occupation\": \"string\",\n      \"base\": \"string\"\n    },\n    \"connections\": {\n      \"groupAffiliation\": \"string\",\n      \"relatives\": \"string\"\n    },\n    \"images\": {\n      \"xs\": \"https://WBnbIBXffDoDclaAHEBNpzuBfsGXeVuf.ukcyo3lkr9ZB2jxB-s-zHdc.BRDMf1JMPzaoqvVSVS0eA\",\n      \"sm\": \"http://zXw.pkYdHKMd625I-ZhARpjFshiqMtXsV-n\",\n      \"md\": \"http://YkbcdkezzBNRIPhunk.lpwJ8PK,z8Dq9sEHt7fClttfJ6rld3Vh+-FYI9RgF\",\n      \"lg\": \"https://PBXGcwR.dllbqgwfn0Kp2r3YtdszPBuufJvBncOrTa6si4elPz,ZulcL3tve-T+7e\"\n    }\n  },\n  {\n    \"id\": 1,\n    \"name\": \"A-Bomb\",\n    \"slug\": \"1-a-bomb\",\n    \"powerstats\": {\n      \"intelligence\": 25,\n      \"strength\": 50,\n      \"speed\": 42,\n      \"durability\": 72,\n      \"power\": 41,\n      \"combat\": 28\n    },\n    \"appearance\": {\n      \"gender\": \"string\",\n      \"race\": \"string\",\n      \"height\": [\n        \"6'8\",\n        \"203 cm\"\n      ],\n      \"weight\": [\n        \"980 lb\",\n        \"441 kg\"\n      ],\n      \"eyeColor\": \"string\",\n      \"hairColor\": \"string\"\n    },\n    \"biography\": {\n      \"fullName\": \"string\",\n      \"alterEgos\": \"string\",\n      \"aliases\": [\n        \"string\",\n        \"string\"\n      ],\n      \"placeOfBirth\": \"string\",\n      \"firstAppearance\": \"string\",\n      \"publisher\": \"string\",\n      \"alignment\": \"bad\"\n    },\n    \"work\": {\n      \"occupation\": \"string\",\n      \"base\": \"string\"\n    },\n    \"connections\": {\n      \"groupAffiliation\": \"string\",\n      \"relatives\": \"string\"\n    },\n    \"images\": {\n      \"xs\": \"https://kZUMlgOpkgzCGNxsxWtidUhVmcEMb.sfcxFubkzC-N3B9uXfeGnoef7be29hfW0\",\n      \"sm\": \"https://b.iyxdHXZQBQ69ChdU7wwAfIA3c.92KcZIgD6UbWiDGr6UxB3OHV5jbyTwYBFEFd0a\",\n      \"md\": \"http://kctqVOnD.ulwkV4AS4UFfz30aIxpXyq67PO2WnwVGa7k7GAiW1Xdv9rabs83Mby,\",\n      \"lg\": \"http://NXYEnqVRJMXMrEuRKW.eyv.pkXVSFaElcy3F,siLUDAvJe9uBY6RoWT0\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "563853bb-da06-4426-9192-467db1e23f72",
+          "name": "Get Character By Id",
+          "request": {
+            "name": "Get Character By Id",
+            "description": {
+              "content": "Returns the complete record for a single character keyed by numeric id (1..731).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "id",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "41d03cf1-2522-425c-9e26-becaec929be8",
+              "name": "A single character record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "id",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"name\": \"A-Bomb\",\n  \"slug\": \"1-a-bomb\",\n  \"powerstats\": {\n    \"intelligence\": 78,\n    \"strength\": 92,\n    \"speed\": 22,\n    \"durability\": 52,\n    \"power\": 99,\n    \"combat\": 56\n  },\n  \"appearance\": {\n    \"gender\": \"string\",\n    \"race\": \"string\",\n    \"height\": [\n      \"6'8\",\n      \"203 cm\"\n    ],\n    \"weight\": [\n      \"980 lb\",\n      \"441 kg\"\n    ],\n    \"eyeColor\": \"string\",\n    \"hairColor\": \"string\"\n  },\n  \"biography\": {\n    \"fullName\": \"string\",\n    \"alterEgos\": \"string\",\n    \"aliases\": [\n      \"string\",\n      \"string\"\n    ],\n    \"placeOfBirth\": \"string\",\n    \"firstAppearance\": \"string\",\n    \"publisher\": \"string\",\n    \"alignment\": \"good\"\n  },\n  \"work\": {\n    \"occupation\": \"string\",\n    \"base\": \"string\"\n  },\n  \"connections\": {\n    \"groupAffiliation\": \"string\",\n    \"relatives\": \"string\"\n  },\n  \"images\": {\n    \"xs\": \"https://L.ebPd-,NkcbHF-DmN3hZtd2F,Si6K,rmnbD19BfdYgEBlvOTcq\",\n    \"sm\": \"http://Brinp.hmgfqaGM9N26d30v.,pgHX5ZOE2HDI7raIRufgBUShBEwALo6lUmVnAk1hw2ZCu2c7FZOd\",\n    \"md\": \"http://ffE.aeaEZ54P-BcnvK4L\",\n    \"lg\": \"http://da.jvgzm-rSkBeT1UDzWovtGWS,qv5LscnO6RKueeiu1\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a6d22f61-68fe-48fd-ac62-5cbcf6fb8531",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "id",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "c32d368a-b6de-4796-a4e3-9833f8296723",
+      "name": "Powerstats",
+      "description": {
+        "content": "Per-character powerstats slices (intelligence, strength, etc.).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "07509276-9d16-4d16-80f5-023f33adb922",
+          "name": "Get Character Powerstats",
+          "request": {
+            "name": "Get Character Powerstats",
+            "description": {
+              "content": "Returns just the powerstats slice for a single character.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "powerstats",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8d42064a-f4b0-488e-b5ab-f6d6f54291a0",
+              "name": "The character's powerstats sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "powerstats",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"intelligence\": 7,\n  \"strength\": 4,\n  \"speed\": 40,\n  \"durability\": 1,\n  \"power\": 88,\n  \"combat\": 98\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "472d0484-b3c1-4b66-a97b-d93103baebb0",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "powerstats",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "e2784bb6-520c-42d8-89e1-2a24c392592a",
+      "name": "Appearance",
+      "description": {
+        "content": "Per-character physical appearance slices.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "30126fc3-8550-4baf-8699-36fb512fe914",
+          "name": "Get Character Appearance",
+          "request": {
+            "name": "Get Character Appearance",
+            "description": {
+              "content": "Returns just the appearance slice for a single character.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "appearance",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a583e640-f071-4d84-aebe-b7afb159eb15",
+              "name": "The character's appearance sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "appearance",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"gender\": \"string\",\n  \"race\": \"string\",\n  \"height\": [\n    \"6'8\",\n    \"203 cm\"\n  ],\n  \"weight\": [\n    \"980 lb\",\n    \"441 kg\"\n  ],\n  \"eyeColor\": \"string\",\n  \"hairColor\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fb159774-deab-48e8-9ff1-cbdae81ff405",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "appearance",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "2a679371-26ee-48c4-badc-3ed09501f139",
+      "name": "Biography",
+      "description": {
+        "content": "Per-character biographical slices.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f742db84-69b8-46a8-8fb0-7f7064adbc46",
+          "name": "Get Character Biography",
+          "request": {
+            "name": "Get Character Biography",
+            "description": {
+              "content": "Returns just the biography slice for a single character.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "biography",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "87f4dd13-0b3f-4add-bea2-dafe969da575",
+              "name": "The character's biography sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "biography",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"fullName\": \"string\",\n  \"alterEgos\": \"string\",\n  \"aliases\": [\n    \"string\",\n    \"string\"\n  ],\n  \"placeOfBirth\": \"string\",\n  \"firstAppearance\": \"string\",\n  \"publisher\": \"string\",\n  \"alignment\": \"neutral\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6f202d88-ef5b-4f56-be23-1690dfd56957",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "biography",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "ea27a55c-8e5e-4174-ad01-46370744cda5",
+      "name": "Work",
+      "description": {
+        "content": "Per-character occupation and base slices.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8ceb383b-ecda-4347-97a3-75afa3035d71",
+          "name": "Get Character Work",
+          "request": {
+            "name": "Get Character Work",
+            "description": {
+              "content": "Returns just the work slice for a single character (occupation and base).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "work",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b49f6714-137c-4ac7-9c76-fa22793080d7",
+              "name": "The character's work sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "work",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"occupation\": \"string\",\n  \"base\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67f34289-4db3-4e1c-9f4e-b53bec48ac53",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "work",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "7c8730ed-efc8-464b-96b4-0d491586a0c7",
+      "name": "Connections",
+      "description": {
+        "content": "Per-character group affiliations and relatives.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c631a730-f6f1-48d1-831c-f95e736259ee",
+          "name": "Get Character Connections",
+          "request": {
+            "name": "Get Character Connections",
+            "description": {
+              "content": "Returns just the connections slice for a single character (group affiliations and relatives).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "connections",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fe586f6e-d033-4989-b91f-bc78c4b01649",
+              "name": "The character's connections sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "connections",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"groupAffiliation\": \"string\",\n  \"relatives\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a3e8b98c-b898-4861-b244-82133d2b7edb",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "connections",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b4f05b60-6fad-4707-b3f4-d49e0d557e46",
+      "name": "Images",
+      "description": {
+        "content": "Multi-resolution character image assets.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a23a4dc0-a86f-4e25-9301-a2833ec84f4b",
+          "name": "Get Character Image",
+          "request": {
+            "name": "Get Character Image",
+            "description": {
+              "content": "Returns a static JPG image for a character at the requested size. The filename uses the character slug pattern `{id}-{slug}.jpg` (e.g. `1-a-bomb.jpg`).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "images",
+                ":size",
+                ":filename"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "size",
+                  "description": "(Required) Image size variant."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "filename",
+                  "description": "(Required) Image filename, e.g. `1-a-bomb.jpg`."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/jpeg"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1f43722f-52fd-43e2-bb93-a40d1901e227",
+              "name": "A JPG image asset.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "images",
+                    ":size",
+                    ":filename"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "size",
+                      "description": "(Required) Image size variant."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "filename",
+                      "description": "(Required) Image filename, e.g. `1-a-bomb.jpg`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/jpeg"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/jpeg"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ed7d02fa-6bba-4ab1-a717-f58f4093044e",
+              "name": "No image exists at the requested size and filename.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "images",
+                    ":size",
+                    ":filename"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "size",
+                      "description": "(Required) Image size variant."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "filename",
+                      "description": "(Required) Image filename, e.g. `1-a-bomb.jpg`."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://akabab.github.io/superhero-api/api",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Numeric character id, 1..731.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<integer>",
+      "key": "id"
+    }
+  ],
+  "info": {
+    "_postman_id": "b5e20044-f510-4d10-9fb9-421e92da5cf8",
+    "name": "Superhero API (akabab)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open-source static REST API exposing 731 superheroes and villains from\nmultiple comic universes (Marvel, DC, Dark Horse, Image, and more) as\npre-built JSON files served from GitHub Pages and the jsDelivr CDN.\nAll endpoints are unauthenticated GETs.\n\n\nContact Support:\n Name: akabab/superhero-api",
+      "type": "text/plain"
+    }
+  }
+}

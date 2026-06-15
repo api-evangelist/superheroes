@@ -1,0 +1,216 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Superhero API (akabab)",
+    "version": "0.3.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Characters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List All Characters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/all.json"
+          },
+          "docs": "Returns every character record in the dataset as a single JSON array of 731 entries."
+        },
+        {
+          "info": {
+            "name": "Get Character By Id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/id/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns the complete record for a single character keyed by numeric id (1..731)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Powerstats",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Powerstats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/powerstats/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the powerstats slice for a single character."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Appearance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Appearance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/appearance/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the appearance slice for a single character."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Biography",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Biography",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/biography/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the biography slice for a single character."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Work",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Work",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/work/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the work slice for a single character (occupation and base)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Connections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Connections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/connections/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the connections slice for a single character (group affiliations and relatives)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Images",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Image",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/images/:size/:filename",
+            "params": [
+              {
+                "name": "size",
+                "value": "",
+                "type": "path",
+                "description": "Image size variant."
+              },
+              {
+                "name": "filename",
+                "value": "",
+                "type": "path",
+                "description": "Image filename, e.g. `1-a-bomb.jpg`."
+              }
+            ]
+          },
+          "docs": "Returns a static JPG image for a character at the requested size. The filename uses the character slug pattern `{id}-{slug}.jpg` (e.g. `1-a-bomb.jpg`)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
