@@ -90,13 +90,13 @@ common:
   - type: JSONStructure
     url: json-structure/superheroes-character-structure.json
     title: Character
-  - type: Example
+  - type: Examples
     url: examples/superheroes-character-example.json
     title: Character Example
-  - type: Example
+  - type: Examples
     url: examples/superheroes-all-example.json
     title: All Characters Example
-  - type: Example
+  - type: Examples
     url: examples/superheroes-powerstats-example.json
     title: Powerstats Example
   - type: RateLimits
