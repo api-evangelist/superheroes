@@ -43,6 +43,8 @@ apis:
       - type: OpenAPI
         url: openapi/superheroes-openapi.yml
 common:
+  - type: DomainSecurity
+    url: security/superheroes-domain-security.yml
   - type: Website
     url: https://akabab.github.io/superhero-api/api/
   - type: SourceCode
