@@ -1,0 +1,64 @@
+openapi: 3.0.3
+info:
+  title: Superhero API (akabab) Appearance Images API
+  description: 'Open-source static REST API exposing 731 superheroes and villains from
+
+    multiple comic universes (Marvel, DC, Dark Horse, Image, and more) as
+
+    pre-built JSON files served from GitHub Pages and the jsDelivr CDN.
+
+    All endpoints are unauthenticated GETs.
+
+    '
+  version: 0.3.0
+  contact:
+    name: akabab/superhero-api
+    url: https://github.com/akabab/superhero-api
+  license:
+    name: MIT
+    url: https://github.com/akabab/superhero-api/blob/master/LICENSE
+servers:
+- url: https://akabab.github.io/superhero-api/api
+  description: Primary origin (GitHub Pages)
+- url: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
+  description: jsDelivr CDN mirror
+tags:
+- name: Images
+  description: Multi-resolution character image assets.
+paths:
+  /images/{size}/{filename}:
+    get:
+      operationId: getCharacterImage
+      summary: Get Character Image
+      description: Returns a static JPG image for a character at the requested size. The filename uses the character slug pattern `{id}-{slug}.jpg` (e.g. `1-a-bomb.jpg`).
+      tags:
+      - Images
+      parameters:
+      - name: size
+        in: path
+        required: true
+        description: Image size variant.
+        schema:
+          type: string
+          enum:
+          - xs
+          - sm
+          - md
+          - lg
+      - name: filename
+        in: path
+        required: true
+        description: Image filename, e.g. `1-a-bomb.jpg`.
+        schema:
+          type: string
+          pattern: ^[0-9]+-[a-z0-9-]+\.jpg$
+      responses:
+        '200':
+          description: A JPG image asset.
+          content:
+            image/jpeg:
+              schema:
+                type: string
+                format: binary
+        '404':
+          description: No image exists at the requested size and filename.

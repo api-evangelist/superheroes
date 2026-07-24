@@ -1,0 +1,251 @@
+openapi: 3.0.3
+info:
+  title: Superhero API (akabab) Appearance Characters API
+  description: 'Open-source static REST API exposing 731 superheroes and villains from
+
+    multiple comic universes (Marvel, DC, Dark Horse, Image, and more) as
+
+    pre-built JSON files served from GitHub Pages and the jsDelivr CDN.
+
+    All endpoints are unauthenticated GETs.
+
+    '
+  version: 0.3.0
+  contact:
+    name: akabab/superhero-api
+    url: https://github.com/akabab/superhero-api
+  license:
+    name: MIT
+    url: https://github.com/akabab/superhero-api/blob/master/LICENSE
+servers:
+- url: https://akabab.github.io/superhero-api/api
+  description: Primary origin (GitHub Pages)
+- url: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
+  description: jsDelivr CDN mirror
+tags:
+- name: Characters
+  description: Full character records and the consolidated dataset.
+paths:
+  /all.json:
+    get:
+      operationId: listAllCharacters
+      summary: List All Characters
+      description: Returns every character record in the dataset as a single JSON array of 731 entries.
+      tags:
+      - Characters
+      responses:
+        '200':
+          description: A JSON array of all character records.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Character'
+  /id/{id}.json:
+    get:
+      operationId: getCharacterById
+      summary: Get Character By Id
+      description: Returns the complete record for a single character keyed by numeric id (1..731).
+      tags:
+      - Characters
+      parameters:
+      - $ref: '#/components/parameters/CharacterId'
+      responses:
+        '200':
+          description: A single character record.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Character'
+        '404':
+          description: No character with the supplied id exists.
+components:
+  parameters:
+    CharacterId:
+      name: id
+      in: path
+      required: true
+      description: Numeric character id, 1..731.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 731
+  schemas:
+    Powerstats:
+      type: object
+      description: Six-axis powerstats vector scored 0-100 (null if unknown).
+      properties:
+        intelligence:
+          type: integer
+          nullable: true
+          minimum: 0
+          maximum: 100
+        strength:
+          type: integer
+          nullable: true
+          minimum: 0
+          maximum: 100
+        speed:
+          type: integer
+          nullable: true
+          minimum: 0
+          maximum: 100
+        durability:
+          type: integer
+          nullable: true
+          minimum: 0
+          maximum: 100
+        power:
+          type: integer
+          nullable: true
+          minimum: 0
+          maximum: 100
+        combat:
+          type: integer
+          nullable: true
+          minimum: 0
+          maximum: 100
+    Connections:
+      type: object
+      description: Group affiliations and family connections.
+      properties:
+        groupAffiliation:
+          type: string
+          description: Group/team affiliations.
+        relatives:
+          type: string
+          description: Known relatives.
+    Images:
+      type: object
+      description: Image URLs at four sizes.
+      required:
+      - xs
+      - sm
+      - md
+      - lg
+      properties:
+        xs:
+          type: string
+          format: uri
+        sm:
+          type: string
+          format: uri
+        md:
+          type: string
+          format: uri
+        lg:
+          type: string
+          format: uri
+    Character:
+      type: object
+      description: A complete superhero or villain record.
+      required:
+      - id
+      - name
+      - slug
+      - powerstats
+      - appearance
+      - biography
+      - work
+      - connections
+      - images
+      properties:
+        id:
+          type: integer
+          description: Numeric identifier, 1..731.
+          example: 1
+        name:
+          type: string
+          description: Display name of the character.
+          example: A-Bomb
+        slug:
+          type: string
+          description: URL-safe slug in `{id}-{name}` form.
+          example: 1-a-bomb
+        powerstats:
+          $ref: '#/components/schemas/Powerstats'
+        appearance:
+          $ref: '#/components/schemas/Appearance'
+        biography:
+          $ref: '#/components/schemas/Biography'
+        work:
+          $ref: '#/components/schemas/Work'
+        connections:
+          $ref: '#/components/schemas/Connections'
+        images:
+          $ref: '#/components/schemas/Images'
+    Appearance:
+      type: object
+      description: Physical appearance attributes.
+      properties:
+        gender:
+          type: string
+          description: Reported gender or "-" if unknown.
+        race:
+          type: string
+          nullable: true
+          description: Species / race designation (e.g. Human, Kryptonian, Mutant).
+        height:
+          type: array
+          description: Height pair — imperial then metric.
+          items:
+            type: string
+          example:
+          - 6'8
+          - 203 cm
+        weight:
+          type: array
+          description: Weight pair — imperial then metric.
+          items:
+            type: string
+          example:
+          - 980 lb
+          - 441 kg
+        eyeColor:
+          type: string
+          description: Eye color or "-" if unknown.
+        hairColor:
+          type: string
+          description: Hair color or "-" / "No Hair" if unknown / bald.
+    Biography:
+      type: object
+      description: Biographical information.
+      properties:
+        fullName:
+          type: string
+          description: Real name where known.
+        alterEgos:
+          type: string
+          description: Comma-separated alter egos, or "No alter egos found.".
+        aliases:
+          type: array
+          description: Known aliases.
+          items:
+            type: string
+        placeOfBirth:
+          type: string
+        firstAppearance:
+          type: string
+          description: First appearance in canonical comics / media.
+        publisher:
+          type: string
+          description: Originating publisher (Marvel Comics, DC Comics, etc.).
+        alignment:
+          type: string
+          description: Moral alignment of the character.
+          enum:
+          - good
+          - bad
+          - neutral
+          - '-'
+    Work:
+      type: object
+      description: Occupational record.
+      properties:
+        occupation:
+          type: string
+          description: Occupation(s), or "-" if unknown.
+        base:
+          type: string
+          description: Base of operations, or "-" if unknown.

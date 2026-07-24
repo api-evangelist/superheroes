@@ -1,0 +1,89 @@
+openapi: 3.0.3
+info:
+  title: Superhero API (akabab) Appearance Biography API
+  description: 'Open-source static REST API exposing 731 superheroes and villains from
+
+    multiple comic universes (Marvel, DC, Dark Horse, Image, and more) as
+
+    pre-built JSON files served from GitHub Pages and the jsDelivr CDN.
+
+    All endpoints are unauthenticated GETs.
+
+    '
+  version: 0.3.0
+  contact:
+    name: akabab/superhero-api
+    url: https://github.com/akabab/superhero-api
+  license:
+    name: MIT
+    url: https://github.com/akabab/superhero-api/blob/master/LICENSE
+servers:
+- url: https://akabab.github.io/superhero-api/api
+  description: Primary origin (GitHub Pages)
+- url: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
+  description: jsDelivr CDN mirror
+tags:
+- name: Biography
+  description: Per-character biographical slices.
+paths:
+  /biography/{id}.json:
+    get:
+      operationId: getCharacterBiography
+      summary: Get Character Biography
+      description: Returns just the biography slice for a single character.
+      tags:
+      - Biography
+      parameters:
+      - $ref: '#/components/parameters/CharacterId'
+      responses:
+        '200':
+          description: The character's biography sub-document.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Biography'
+        '404':
+          description: No character with the supplied id exists.
+components:
+  schemas:
+    Biography:
+      type: object
+      description: Biographical information.
+      properties:
+        fullName:
+          type: string
+          description: Real name where known.
+        alterEgos:
+          type: string
+          description: Comma-separated alter egos, or "No alter egos found.".
+        aliases:
+          type: array
+          description: Known aliases.
+          items:
+            type: string
+        placeOfBirth:
+          type: string
+        firstAppearance:
+          type: string
+          description: First appearance in canonical comics / media.
+        publisher:
+          type: string
+          description: Originating publisher (Marvel Comics, DC Comics, etc.).
+        alignment:
+          type: string
+          description: Moral alignment of the character.
+          enum:
+          - good
+          - bad
+          - neutral
+          - '-'
+  parameters:
+    CharacterId:
+      name: id
+      in: path
+      required: true
+      description: Numeric character id, 1..731.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 731
