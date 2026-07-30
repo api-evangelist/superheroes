@@ -1,4 +1,17 @@
 aid: superheroes
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/superheroes.png
 name: Superhero API (akabab)
 description: >-
   Open-source REST API exposing 731 superheroes and villains drawn from multiple comic universes (Marvel, DC, Dark
@@ -23,25 +36,104 @@ tags:
   - GitHub Pages
   - Public APIs
 apis:
-  - name: Superhero API
-    description: >-
-      The Superhero API is a static JSON REST surface that returns a single consolidated dataset of 731 characters or
-      per-character / per-property records. All responses are pre-built JSON files served from GitHub Pages
-      (akabab.github.io) with a jsDelivr CDN mirror. Endpoints cover the full character record (/id/{id}.json) and
-      individual property slices (powerstats, appearance, biography, work, connections), plus a bulk /all.json file
-      containing every character. A separate image surface serves four sizes (xs, sm, md, lg) per character slug.
-    humanURL: https://akabab.github.io/superhero-api/api/
-    baseURL: https://akabab.github.io/superhero-api/api
-    tags:
-      - Games And Comics
-      - Superheroes
-    properties:
-      - type: Documentation
-        url: https://akabab.github.io/superhero-api/api/
-      - type: SourceCode
-        url: https://github.com/akabab/superhero-api
-      - type: OpenAPI
-        url: openapi/superheroes-openapi.yml
+- aid: superheroes:superheroes-appearance-api
+  name: Superhero API (akabab) Appearance API
+  description: Per-character physical appearance slices.
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Appearance
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-appearance-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+- aid: superheroes:superheroes-biography-api
+  name: Superhero API (akabab) Biography API
+  description: Per-character biographical slices.
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Biography
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-biography-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+- aid: superheroes:superheroes-characters-api
+  name: Superhero API (akabab) Characters API
+  description: Full character records and the consolidated dataset.
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Characters
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-characters-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+- aid: superheroes:superheroes-connections-api
+  name: Superhero API (akabab) Connections API
+  description: Per-character group affiliations and relatives.
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-connections-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+- aid: superheroes:superheroes-images-api
+  name: Superhero API (akabab) Images API
+  description: Multi-resolution character image assets.
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Images
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-images-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+- aid: superheroes:superheroes-powerstats-api
+  name: Superhero API (akabab) Powerstats API
+  description: Per-character powerstats slices (intelligence, strength, etc.).
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Powerstats
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-powerstats-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
+- aid: superheroes:superheroes-work-api
+  name: Superhero API (akabab) Work API
+  description: Per-character occupation and base slices.
+  humanURL: https://akabab.github.io/superhero-api/api/
+  baseURL: https://akabab.github.io/superhero-api/api
+  tags:
+  - Work
+  properties:
+  - type: OpenAPI
+    url: openapi/superheroes-work-api-openapi.yml
+  - type: Documentation
+    url: https://akabab.github.io/superhero-api/api/
+  - type: SourceCode
+    url: https://github.com/akabab/superhero-api
 common:
   - type: AgenticAccess
     url: agentic-access/superheroes-agentic-access.yml
