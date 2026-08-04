@@ -1,0 +1,26 @@
+{
+  "provider": "superheroes",
+  "sources": [
+    "superheroes-appearance-api-openapi.yml",
+    "superheroes-biography-api-openapi.yml",
+    "superheroes-characters-api-openapi.yml",
+    "superheroes-connections-api-openapi.yml",
+    "superheroes-images-api-openapi.yml",
+    "superheroes-powerstats-api-openapi.yml",
+    "superheroes-work-api-openapi.yml"
+  ],
+  "outputs": [
+    "superheroes-appearance-api-openapi.yml",
+    "superheroes-biography-api-openapi.yml",
+    "superheroes-characters-api-openapi.yml",
+    "superheroes-connections-api-openapi.yml",
+    "superheroes-images-api-openapi.yml",
+    "superheroes-powerstats-api-openapi.yml",
+    "superheroes-work-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
