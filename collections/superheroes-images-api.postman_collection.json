@@ -1,0 +1,182 @@
+{
+  "item": [
+    {
+      "id": "d0d2241a-0165-4f20-aeff-6fed7322c1dc",
+      "name": "Images",
+      "description": {
+        "content": "Multi-resolution character image assets.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0564b22b-c5e4-47b2-82d5-d9c71faaefa5",
+          "name": "Get Character Image",
+          "request": {
+            "name": "Get Character Image",
+            "description": {
+              "content": "Returns a static JPG image for a character at the requested size. The filename uses the character slug pattern `{id}-{slug}.jpg` (e.g. `1-a-bomb.jpg`).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "images",
+                ":size",
+                ":filename"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "size",
+                  "description": "(Required) Image size variant."
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "filename",
+                  "description": "(Required) Image filename, e.g. `1-a-bomb.jpg`."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "image/jpeg"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8b1420e1-a2e5-4c23-9f9e-adbf982feea0",
+              "name": "A JPG image asset.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "images",
+                    ":size",
+                    ":filename"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "size",
+                      "description": "(Required) Image size variant."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "filename",
+                      "description": "(Required) Image filename, e.g. `1-a-bomb.jpg`."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "image/jpeg"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "image/jpeg"
+                }
+              ],
+              "body": "string",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "974adea6-362d-4473-be0b-645ca8668f9e",
+              "name": "No image exists at the requested size and filename.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "images",
+                    ":size",
+                    ":filename"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "size",
+                      "description": "(Required) Image size variant."
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "filename",
+                      "description": "(Required) Image filename, e.g. `1-a-bomb.jpg`."
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://akabab.github.io/superhero-api/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "edfbb3c8-0448-4fba-8340-b809c39d95d1",
+    "name": "Superhero API (akabab) Appearance Images API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open-source static REST API exposing 731 superheroes and villains from\nmultiple comic universes (Marvel, DC, Dark Horse, Image, and more) as\npre-built JSON files served from GitHub Pages and the jsDelivr CDN.\nAll endpoints are unauthenticated GETs.\n\n\nContact Support:\n Name: akabab/superhero-api",
+      "type": "text/plain"
+    }
+  }
+}

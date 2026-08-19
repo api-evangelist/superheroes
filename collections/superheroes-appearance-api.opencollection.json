@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Superhero API (akabab) Appearance API",
+    "version": "0.3.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Appearance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Appearance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/appearance/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the appearance slice for a single character."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

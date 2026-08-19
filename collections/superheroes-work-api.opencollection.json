@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Superhero API (akabab) Appearance Work API",
+    "version": "0.3.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Work",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Character Work",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/work/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns just the work slice for a single character (occupation and base)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

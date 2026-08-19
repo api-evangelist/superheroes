@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "00b36ba4-ed33-4b0e-b0f3-fd7eb73c071c",
+      "name": "Work",
+      "description": {
+        "content": "Per-character occupation and base slices.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bef761f2-2c59-489c-82d2-2e91330d551a",
+          "name": "Get Character Work",
+          "request": {
+            "name": "Get Character Work",
+            "description": {
+              "content": "Returns just the work slice for a single character (occupation and base).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "work",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0984d872-0409-483c-a84c-ef64d65d1608",
+              "name": "The character's work sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "work",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"occupation\": \"string\",\n  \"base\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "477971e1-1768-41aa-937e-839ef9180868",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "work",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://akabab.github.io/superhero-api/api",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Numeric character id, 1..731.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<integer>",
+      "key": "id"
+    }
+  ],
+  "info": {
+    "_postman_id": "8e16f255-acea-417f-bb4f-e31f64989b72",
+    "name": "Superhero API (akabab) Appearance Work API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open-source static REST API exposing 731 superheroes and villains from\nmultiple comic universes (Marvel, DC, Dark Horse, Image, and more) as\npre-built JSON files served from GitHub Pages and the jsDelivr CDN.\nAll endpoints are unauthenticated GETs.\n\n\nContact Support:\n Name: akabab/superhero-api",
+      "type": "text/plain"
+    }
+  }
+}

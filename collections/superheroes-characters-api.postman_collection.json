@@ -1,0 +1,214 @@
+{
+  "item": [
+    {
+      "id": "ec17ae84-d136-41ba-8425-ff0277d7b7bf",
+      "name": "Characters",
+      "description": {
+        "content": "Full character records and the consolidated dataset.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ea7a60ab-96bc-4d86-baaf-2313b672c4ec",
+          "name": "List All Characters",
+          "request": {
+            "name": "List All Characters",
+            "description": {
+              "content": "Returns every character record in the dataset as a single JSON array of 731 entries.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "all.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "580d6415-5117-436f-872b-2777947734e5",
+              "name": "A JSON array of all character records.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "all.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"A-Bomb\",\n    \"slug\": \"1-a-bomb\",\n    \"powerstats\": {\n      \"intelligence\": 16,\n      \"strength\": 63,\n      \"speed\": 61,\n      \"durability\": 90,\n      \"power\": 82,\n      \"combat\": 16\n    },\n    \"appearance\": {\n      \"gender\": \"string\",\n      \"race\": \"string\",\n      \"height\": [\n        \"6'8\",\n        \"203 cm\"\n      ],\n      \"weight\": [\n        \"980 lb\",\n        \"441 kg\"\n      ],\n      \"eyeColor\": \"string\",\n      \"hairColor\": \"string\"\n    },\n    \"biography\": {\n      \"fullName\": \"string\",\n      \"alterEgos\": \"string\",\n      \"aliases\": [\n        \"string\",\n        \"string\"\n      ],\n      \"placeOfBirth\": \"string\",\n      \"firstAppearance\": \"string\",\n      \"publisher\": \"string\",\n      \"alignment\": \"good\"\n    },\n    \"work\": {\n      \"occupation\": \"string\",\n      \"base\": \"string\"\n    },\n    \"connections\": {\n      \"groupAffiliation\": \"string\",\n      \"relatives\": \"string\"\n    },\n    \"images\": {\n      \"xs\": \"http://WSOoRusI.dfgP9Hwbj6eiKjG2wr.78+kGzZVngpZdeTsjWUTqsz7c8yV4G.ietz3yXnJK2m6fvAeUtiPatv4irRSyEJho.Cw1fNd\",\n      \"sm\": \"http://nWRoSXyxUngWjcuXmtxjvgrWwWcvVeIbw.swWf8h,dHToNCDv77ESs8SIMiMNndAw6BxcMnx+35eqMV8Z-qQDos\",\n      \"md\": \"http://CWxQLBTenD.duD9horLvFWTsaUuF2PAubzcrZzBcg4zka\",\n      \"lg\": \"https://RXFFn.evUJZgYCR8haoi.jHGo\"\n    }\n  },\n  {\n    \"id\": 1,\n    \"name\": \"A-Bomb\",\n    \"slug\": \"1-a-bomb\",\n    \"powerstats\": {\n      \"intelligence\": 99,\n      \"strength\": 66,\n      \"speed\": 11,\n      \"durability\": 67,\n      \"power\": 57,\n      \"combat\": 62\n    },\n    \"appearance\": {\n      \"gender\": \"string\",\n      \"race\": \"string\",\n      \"height\": [\n        \"6'8\",\n        \"203 cm\"\n      ],\n      \"weight\": [\n        \"980 lb\",\n        \"441 kg\"\n      ],\n      \"eyeColor\": \"string\",\n      \"hairColor\": \"string\"\n    },\n    \"biography\": {\n      \"fullName\": \"string\",\n      \"alterEgos\": \"string\",\n      \"aliases\": [\n        \"string\",\n        \"string\"\n      ],\n      \"placeOfBirth\": \"string\",\n      \"firstAppearance\": \"string\",\n      \"publisher\": \"string\",\n      \"alignment\": \"neutral\"\n    },\n    \"work\": {\n      \"occupation\": \"string\",\n      \"base\": \"string\"\n    },\n    \"connections\": {\n      \"groupAffiliation\": \"string\",\n      \"relatives\": \"string\"\n    },\n    \"images\": {\n      \"xs\": \"http://KsgeKe.qznEvjAk8maBARxw+sDcodPm3dk-g73Yp3RVyN\",\n      \"sm\": \"https://jOtXFVvraNi.iaTtFYLndrkUdZlvfmLEgy.ey2Z4,TkpH9+a\",\n      \"md\": \"http://HtCPmJSZdbHsoWkRlxEsOdSbJ.yaypj,uz5kOfLa5uRemIwfzRE6Pb4oCcGd,DvYUmijeWtpbwAIcYPVCCtemonvvq\",\n      \"lg\": \"https://LHEPatMiXGaCRsmCkyJUIkkJIlTyEKmE.dxrZa7RQweavHoTKX02TYTs,94LxBSQft0UNPTWFZh2BKjWsOeX1MNJ8\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e6d6af2-f71f-4ca9-85a3-2e99e0c756e8",
+          "name": "Get Character By Id",
+          "request": {
+            "name": "Get Character By Id",
+            "description": {
+              "content": "Returns the complete record for a single character keyed by numeric id (1..731).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "id",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8e00a1f1-edef-46e1-a3ea-507c3f5d80ba",
+              "name": "A single character record.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "id",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"name\": \"A-Bomb\",\n  \"slug\": \"1-a-bomb\",\n  \"powerstats\": {\n    \"intelligence\": 86,\n    \"strength\": 73,\n    \"speed\": 44,\n    \"durability\": 74,\n    \"power\": 0,\n    \"combat\": 62\n  },\n  \"appearance\": {\n    \"gender\": \"string\",\n    \"race\": \"string\",\n    \"height\": [\n      \"6'8\",\n      \"203 cm\"\n    ],\n    \"weight\": [\n      \"980 lb\",\n      \"441 kg\"\n    ],\n    \"eyeColor\": \"string\",\n    \"hairColor\": \"string\"\n  },\n  \"biography\": {\n    \"fullName\": \"string\",\n    \"alterEgos\": \"string\",\n    \"aliases\": [\n      \"string\",\n      \"string\"\n    ],\n    \"placeOfBirth\": \"string\",\n    \"firstAppearance\": \"string\",\n    \"publisher\": \"string\",\n    \"alignment\": \"neutral\"\n  },\n  \"work\": {\n    \"occupation\": \"string\",\n    \"base\": \"string\"\n  },\n  \"connections\": {\n    \"groupAffiliation\": \"string\",\n    \"relatives\": \"string\"\n  },\n  \"images\": {\n    \"xs\": \"http://uQkVRjjEEBmtPnMwqO.snaZpIfY4SxOrZzv4ejNIPTwmugkhNMvNYShurjmmCm\",\n    \"sm\": \"https://WSnzxeDOLSnQKXLlAVrIojKkduh.yvfsVvJK-Ke9V5CBAhhUTCypeNspOSCJ0t\",\n    \"md\": \"https://SKZCNjKYjVpYfGvzQJOFqUYIfPeQJ.hzJ1hJuH.ZbNx,0pRnQbS6HZP55KKGwzYwbgJyv+JeWfxD87KvngsyM2qRsllsDjBRcV1UtcXnNH+qphVARa4\",\n    \"lg\": \"http://pUuANuXTKeNeFltsQtxNuFJNW.dipB2ir49RRxtr7du6\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7fbc1086-2789-4583-b719-b5bd48573ca0",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "id",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://akabab.github.io/superhero-api/api",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Numeric character id, 1..731.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<integer>",
+      "key": "id"
+    }
+  ],
+  "info": {
+    "_postman_id": "fdad501e-45e8-4542-aa2b-ee35a56abbb3",
+    "name": "Superhero API (akabab) Appearance Characters API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open-source static REST API exposing 731 superheroes and villains from\nmultiple comic universes (Marvel, DC, Dark Horse, Image, and more) as\npre-built JSON files served from GitHub Pages and the jsDelivr CDN.\nAll endpoints are unauthenticated GETs.\n\n\nContact Support:\n Name: akabab/superhero-api",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Superhero API (akabab) Appearance Characters API",
+    "version": "0.3.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Characters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List All Characters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/all.json"
+          },
+          "docs": "Returns every character record in the dataset as a single JSON array of 731 entries."
+        },
+        {
+          "info": {
+            "name": "Get Character By Id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://akabab.github.io/superhero-api/api/id/:id.json",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Numeric character id, 1..731."
+              }
+            ]
+          },
+          "docs": "Returns the complete record for a single character keyed by numeric id (1..731)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

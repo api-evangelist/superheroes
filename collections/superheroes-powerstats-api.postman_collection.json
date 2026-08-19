@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "6aeb327a-f0a5-4fad-beb6-c35e4068d41d",
+      "name": "Powerstats",
+      "description": {
+        "content": "Per-character powerstats slices (intelligence, strength, etc.).",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "91fd8f13-efa4-4c57-aac1-cf444fe8f701",
+          "name": "Get Character Powerstats",
+          "request": {
+            "name": "Get Character Powerstats",
+            "description": {
+              "content": "Returns just the powerstats slice for a single character.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "powerstats",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6b205a56-1ab0-4749-a6f7-4c60506b2400",
+              "name": "The character's powerstats sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "powerstats",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"intelligence\": 14,\n  \"strength\": 61,\n  \"speed\": 30,\n  \"durability\": 17,\n  \"power\": 59,\n  \"combat\": 32\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e56ba8d3-3706-4ab7-9ef1-c09fb18662f6",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "powerstats",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://akabab.github.io/superhero-api/api",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Numeric character id, 1..731.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<integer>",
+      "key": "id"
+    }
+  ],
+  "info": {
+    "_postman_id": "911f2b29-e34d-498c-b47a-69e0eef3afc0",
+    "name": "Superhero API (akabab) Appearance Powerstats API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open-source static REST API exposing 731 superheroes and villains from\nmultiple comic universes (Marvel, DC, Dark Horse, Image, and more) as\npre-built JSON files served from GitHub Pages and the jsDelivr CDN.\nAll endpoints are unauthenticated GETs.\n\n\nContact Support:\n Name: akabab/superhero-api",
+      "type": "text/plain"
+    }
+  }
+}

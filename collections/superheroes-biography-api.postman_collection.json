@@ -1,0 +1,144 @@
+{
+  "item": [
+    {
+      "id": "88635022-cfaf-4201-a893-5f6ebf544ca7",
+      "name": "Biography",
+      "description": {
+        "content": "Per-character biographical slices.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "263ecb29-68ef-4738-bfdd-76f518fb72cb",
+          "name": "Get Character Biography",
+          "request": {
+            "name": "Get Character Biography",
+            "description": {
+              "content": "Returns just the biography slice for a single character.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "biography",
+                "{{id}}.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b3510a8f-d9a8-4d67-a097-9c506c007fe5",
+              "name": "The character's biography sub-document.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "biography",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"fullName\": \"string\",\n  \"alterEgos\": \"string\",\n  \"aliases\": [\n    \"string\",\n    \"string\"\n  ],\n  \"placeOfBirth\": \"string\",\n  \"firstAppearance\": \"string\",\n  \"publisher\": \"string\",\n  \"alignment\": \"neutral\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "200a43da-3b2e-493e-b475-1e7e3a681171",
+              "name": "No character with the supplied id exists.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "biography",
+                    "{{id}}.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://akabab.github.io/superhero-api/api",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) Numeric character id, 1..731.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<integer>",
+      "key": "id"
+    }
+  ],
+  "info": {
+    "_postman_id": "4cc94fde-1591-48a7-a1de-4b9b4368d6a1",
+    "name": "Superhero API (akabab) Appearance Biography API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Open-source static REST API exposing 731 superheroes and villains from\nmultiple comic universes (Marvel, DC, Dark Horse, Image, and more) as\npre-built JSON files served from GitHub Pages and the jsDelivr CDN.\nAll endpoints are unauthenticated GETs.\n\n\nContact Support:\n Name: akabab/superhero-api",
+      "type": "text/plain"
+    }
+  }
+}
