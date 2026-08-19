@@ -19,7 +19,7 @@ description: >-
   superheroapi.com source, cleaned up, and republished as static JSON files served from GitHub Pages and the jsDelivr
   CDN. Each character includes powerstats, appearance, biography, work, connections, and a multi-resolution image set.
 url: https://akabab.github.io/superhero-api/api/
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-05-28'
 modified: '2026-05-29'
 x-source: public-apis/public-apis
