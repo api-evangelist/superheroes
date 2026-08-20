@@ -31,6 +31,14 @@ tags:
   - Games And Comics
   - Superheroes
   - Comic Books
+  - Open-Source
+  - Static API
+  - GitHub Pages
+  - Public APIs
+tags_raw:
+  - Games And Comics
+  - Superheroes
+  - Comic Books
   - Open Source
   - Static API
   - GitHub Pages
@@ -98,6 +106,8 @@ apis:
   humanURL: https://akabab.github.io/superhero-api/api/
   baseURL: https://akabab.github.io/superhero-api/api
   tags:
+  - Image
+  tags_raw:
   - Images
   properties:
   - type: OpenAPI
