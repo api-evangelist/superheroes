@@ -1,15 +1,13 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Superhero API (akabab) Appearance Powerstats API
+  title: Superhero API (akabab) Powerstats API
   description: 'Open-source static REST API exposing 731 superheroes and villains from
 
     multiple comic universes (Marvel, DC, Dark Horse, Image, and more) as
 
     pre-built JSON files served from GitHub Pages and the jsDelivr CDN.
 
-    All endpoints are unauthenticated GETs.
-
-    '
+    All endpoints are unauthenticated GETs.'
   version: 0.3.0
   contact:
     name: akabab/superhero-api
@@ -45,41 +43,6 @@ paths:
         '404':
           description: No character with the supplied id exists.
 components:
-  schemas:
-    Powerstats:
-      type: object
-      description: Six-axis powerstats vector scored 0-100 (null if unknown).
-      properties:
-        intelligence:
-          type: integer
-          nullable: true
-          minimum: 0
-          maximum: 100
-        strength:
-          type: integer
-          nullable: true
-          minimum: 0
-          maximum: 100
-        speed:
-          type: integer
-          nullable: true
-          minimum: 0
-          maximum: 100
-        durability:
-          type: integer
-          nullable: true
-          minimum: 0
-          maximum: 100
-        power:
-          type: integer
-          nullable: true
-          minimum: 0
-          maximum: 100
-        combat:
-          type: integer
-          nullable: true
-          minimum: 0
-          maximum: 100
   parameters:
     CharacterId:
       name: id
@@ -90,3 +53,44 @@ components:
         type: integer
         minimum: 1
         maximum: 731
+  schemas:
+    Powerstats:
+      type: object
+      description: Six-axis powerstats vector scored 0-100 (null if unknown).
+      properties:
+        intelligence:
+          type:
+          - integer
+          - 'null'
+          minimum: 0
+          maximum: 100
+        strength:
+          type:
+          - integer
+          - 'null'
+          minimum: 0
+          maximum: 100
+        speed:
+          type:
+          - integer
+          - 'null'
+          minimum: 0
+          maximum: 100
+        durability:
+          type:
+          - integer
+          - 'null'
+          minimum: 0
+          maximum: 100
+        power:
+          type:
+          - integer
+          - 'null'
+          minimum: 0
+          maximum: 100
+        combat:
+          type:
+          - integer
+          - 'null'
+          minimum: 0
+          maximum: 100

@@ -1,15 +1,13 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Superhero API (akabab) Appearance Connections API
+  title: Superhero API (akabab) Connections API
   description: 'Open-source static REST API exposing 731 superheroes and villains from
 
     multiple comic universes (Marvel, DC, Dark Horse, Image, and more) as
 
     pre-built JSON files served from GitHub Pages and the jsDelivr CDN.
 
-    All endpoints are unauthenticated GETs.
-
-    '
+    All endpoints are unauthenticated GETs.'
   version: 0.3.0
   contact:
     name: akabab/superhero-api
