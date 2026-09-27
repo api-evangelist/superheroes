@@ -1,16 +1,19 @@
 aid: superheroes
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - akabab/superhero-api
   open_source: unknown
   commercial: true
   callable_host: true
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - openapi
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: free
@@ -44,7 +47,7 @@ tags:
   - Games And Comics
   - Superheroes
   - Comic Books
-  - Open-Source
+  - Open Source
   - Static API
   - GitHub Pages
   - Public APIs
@@ -56,12 +59,13 @@ tags_raw:
   - Static API
   - GitHub Pages
   - Public APIs
+  - Open-Source
 apis:
 - aid: superheroes:superheroes-appearance-api
   name: Superhero API (akabab) Appearance API
   description: Per-character physical appearance slices.
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Appearance
   properties:
@@ -75,7 +79,7 @@ apis:
   name: Superhero API (akabab) Biography API
   description: Per-character biographical slices.
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Biography
   properties:
@@ -89,7 +93,7 @@ apis:
   name: Superhero API (akabab) Characters API
   description: Full character records and the consolidated dataset.
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Characters
   properties:
@@ -103,7 +107,7 @@ apis:
   name: Superhero API (akabab) Connections API
   description: Per-character group affiliations and relatives.
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Connections
   properties:
@@ -117,7 +121,7 @@ apis:
   name: Superhero API (akabab) Images API
   description: Multi-resolution character image assets.
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Image
   tags_raw:
@@ -133,7 +137,7 @@ apis:
   name: Superhero API (akabab) Powerstats API
   description: Per-character powerstats slices (intelligence, strength, etc.).
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Powerstats
   properties:
@@ -147,7 +151,7 @@ apis:
   name: Superhero API (akabab) Work API
   description: Per-character occupation and base slices.
   humanURL: https://akabab.github.io/superhero-api/api/
-  baseURL: https://akabab.github.io/superhero-api/api
+  baseURL: https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api
   tags:
   - Work
   properties:
