@@ -43,16 +43,6 @@ paths:
         '404':
           description: No character with the supplied id exists.
 components:
-  parameters:
-    CharacterId:
-      name: id
-      in: path
-      required: true
-      description: Numeric character id, 1..731.
-      schema:
-        type: integer
-        minimum: 1
-        maximum: 731
   schemas:
     Work:
       type: object
@@ -64,3 +54,13 @@ components:
         base:
           type: string
           description: Base of operations, or "-" if unknown.
+  parameters:
+    CharacterId:
+      name: id
+      in: path
+      required: true
+      description: Numeric character id, 1..731.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 731

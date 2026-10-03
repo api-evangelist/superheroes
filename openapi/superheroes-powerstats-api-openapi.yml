@@ -43,16 +43,6 @@ paths:
         '404':
           description: No character with the supplied id exists.
 components:
-  parameters:
-    CharacterId:
-      name: id
-      in: path
-      required: true
-      description: Numeric character id, 1..731.
-      schema:
-        type: integer
-        minimum: 1
-        maximum: 731
   schemas:
     Powerstats:
       type: object
@@ -94,3 +84,13 @@ components:
           - 'null'
           minimum: 0
           maximum: 100
+  parameters:
+    CharacterId:
+      name: id
+      in: path
+      required: true
+      description: Numeric character id, 1..731.
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 731
