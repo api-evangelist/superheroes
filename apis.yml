@@ -44,15 +44,14 @@ x-category: Games & Comics
 x-tier: 3
 x-tier-reason: bulk-registered-from-public-apis
 tags:
-  - Games And Comics
   - Superheroes
   - Comic Books
   - Open Source
   - Static API
   - GitHub Pages
   - Public APIs
+  - Comics
 tags_raw:
-  - Games And Comics
   - Superheroes
   - Comic Books
   - Open Source
@@ -60,6 +59,7 @@ tags_raw:
   - GitHub Pages
   - Public APIs
   - Open-Source
+  - Comics
 apis:
 - aid: superheroes:superheroes-appearance-api
   name: Superhero API (akabab) Appearance API
@@ -305,3 +305,5 @@ solutions:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-tags-removed:
+- Games And Comics
