@@ -60,6 +60,112 @@ paths:
           description: No character with the supplied id exists.
 components:
   schemas:
+    Biography:
+      type: object
+      description: Biographical information.
+      properties:
+        fullName:
+          type: string
+          description: Real name where known.
+        alterEgos:
+          type: string
+          description: Comma-separated alter egos, or "No alter egos found.".
+        aliases:
+          type: array
+          description: Known aliases.
+          items:
+            type: string
+        placeOfBirth:
+          type: string
+        firstAppearance:
+          type: string
+          description: First appearance in canonical comics / media.
+        publisher:
+          type: string
+          description: Originating publisher (Marvel Comics, DC Comics, etc.).
+        alignment:
+          type: string
+          description: Moral alignment of the character.
+          enum:
+          - good
+          - bad
+          - neutral
+          - '-'
+    Appearance:
+      type: object
+      description: Physical appearance attributes.
+      properties:
+        gender:
+          type: string
+          description: Reported gender or "-" if unknown.
+        race:
+          type:
+          - string
+          - 'null'
+          description: Species / race designation (e.g. Human, Kryptonian, Mutant).
+        height:
+          type: array
+          description: Height pair — imperial then metric.
+          items:
+            type: string
+          example:
+          - 6'8
+          - 203 cm
+        weight:
+          type: array
+          description: Weight pair — imperial then metric.
+          items:
+            type: string
+          example:
+          - 980 lb
+          - 441 kg
+        eyeColor:
+          type: string
+          description: Eye color or "-" if unknown.
+        hairColor:
+          type: string
+          description: Hair color or "-" / "No Hair" if unknown / bald.
+    Work:
+      type: object
+      description: Occupational record.
+      properties:
+        occupation:
+          type: string
+          description: Occupation(s), or "-" if unknown.
+        base:
+          type: string
+          description: Base of operations, or "-" if unknown.
+    Images:
+      type: object
+      description: Image URLs at four sizes.
+      required:
+      - xs
+      - sm
+      - md
+      - lg
+      properties:
+        xs:
+          type: string
+          format: uri
+        sm:
+          type: string
+          format: uri
+        md:
+          type: string
+          format: uri
+        lg:
+          type: string
+          format: uri
+    Connections:
+      type: object
+      description: Group affiliations and family connections.
+      properties:
+        groupAffiliation:
+          type: string
+          description: Group/team affiliations.
+        relatives:
+          type: string
+          description: Known relatives.
     Powerstats:
       type: object
       description: Six-axis powerstats vector scored 0-100 (null if unknown).
@@ -100,112 +206,6 @@ components:
           - 'null'
           minimum: 0
           maximum: 100
-    Biography:
-      type: object
-      description: Biographical information.
-      properties:
-        fullName:
-          type: string
-          description: Real name where known.
-        alterEgos:
-          type: string
-          description: Comma-separated alter egos, or "No alter egos found.".
-        aliases:
-          type: array
-          description: Known aliases.
-          items:
-            type: string
-        placeOfBirth:
-          type: string
-        firstAppearance:
-          type: string
-          description: First appearance in canonical comics / media.
-        publisher:
-          type: string
-          description: Originating publisher (Marvel Comics, DC Comics, etc.).
-        alignment:
-          type: string
-          description: Moral alignment of the character.
-          enum:
-          - good
-          - bad
-          - neutral
-          - '-'
-    Connections:
-      type: object
-      description: Group affiliations and family connections.
-      properties:
-        groupAffiliation:
-          type: string
-          description: Group/team affiliations.
-        relatives:
-          type: string
-          description: Known relatives.
-    Work:
-      type: object
-      description: Occupational record.
-      properties:
-        occupation:
-          type: string
-          description: Occupation(s), or "-" if unknown.
-        base:
-          type: string
-          description: Base of operations, or "-" if unknown.
-    Images:
-      type: object
-      description: Image URLs at four sizes.
-      required:
-      - xs
-      - sm
-      - md
-      - lg
-      properties:
-        xs:
-          type: string
-          format: uri
-        sm:
-          type: string
-          format: uri
-        md:
-          type: string
-          format: uri
-        lg:
-          type: string
-          format: uri
-    Appearance:
-      type: object
-      description: Physical appearance attributes.
-      properties:
-        gender:
-          type: string
-          description: Reported gender or "-" if unknown.
-        race:
-          type:
-          - string
-          - 'null'
-          description: Species / race designation (e.g. Human, Kryptonian, Mutant).
-        height:
-          type: array
-          description: Height pair — imperial then metric.
-          items:
-            type: string
-          example:
-          - 6'8
-          - 203 cm
-        weight:
-          type: array
-          description: Weight pair — imperial then metric.
-          items:
-            type: string
-          example:
-          - 980 lb
-          - 441 kg
-        eyeColor:
-          type: string
-          description: Eye color or "-" if unknown.
-        hairColor:
-          type: string
-          description: Hair color or "-" / "No Hair" if unknown / bald.
     Character:
       type: object
       description: A complete superhero or villain record.
