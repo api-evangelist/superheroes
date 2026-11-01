@@ -1,4 +1,4 @@
-# Superhero API (akabab) (superheroes)
+# Superhero API (akabab)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,72 +66,165 @@
 
 Open-source REST API exposing 731 superheroes and villains drawn from multiple comic universes (Marvel, DC, Dark Horse, Image, and more) under a single, unauthenticated JSON surface. The dataset is rebuilt from the original superheroapi.com source, cleaned up, and republished as static JSON files served from GitHub Pages and the jsDelivr CDN. Each character includes powerstats, appearance, biography, work, connections, and a multi-resolution image set.
 
-**APIs.json:** [https://akabab.github.io/superhero-api/api/](https://akabab.github.io/superhero-api/api/)
+**Areas:** Superheroes · Comic Books · Open Source · Static API · GitHub Pages · Public APIs · Comics
 
-## Tags
+## Superhero API (akabab) on APIs.io
 
-- Games And Comics
-- Superheroes
-- Comic Books
-- Open Source
-- Static API
-- GitHub Pages
-- Public APIs
+Everything profiled for Superhero API (akabab) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/superheroes/](https://apis.io/providers/superheroes/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (7)
 
-- **Created:** 2026-05-28
-- **Modified:** 2026-05-29
+- [Superhero API (akabab) Appearance API](https://apis.io/apis/superheroes/superheroes-appearance-api/) — Per-character physical appearance slices.
+- [Superhero API (akabab) Biography API](https://apis.io/apis/superheroes/superheroes-biography-api/) — Per-character biographical slices.
+- [Superhero API (akabab) Characters API](https://apis.io/apis/superheroes/superheroes-characters-api/) — Full character records and the consolidated dataset.
+- [Superhero API (akabab) Connections API](https://apis.io/apis/superheroes/superheroes-connections-api/) — Per-character group affiliations and relatives.
+- [Superhero API (akabab) Images API](https://apis.io/apis/superheroes/superheroes-images-api/) — Multi-resolution character image assets.
+- [Superhero API (akabab) Powerstats API](https://apis.io/apis/superheroes/superheroes-powerstats-api/) — Per-character powerstats slices (intelligence, strength, etc.).
+- [Superhero API (akabab) Work API](https://apis.io/apis/superheroes/superheroes-work-api/) — Per-character occupation and base slices.
 
-## APIs
+### Published properties
 
-### Superhero API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The Superhero API is a static JSON REST surface that returns a single consolidated dataset of 731 characters or per-character / per-property records. All responses are pre-built JSON files served from GitHub Pages (akabab.github.io) with a jsDelivr CDN mirror. Endpoints cover the full character record (/id/{id}.json) and individual property slices (powerstats, appearance, biography, work, connections), plus a bulk /all.json file containing every character. A separate image surface serves four sizes (xs, sm, md, lg) per character slug.
+#### Agentic access (1)
 
-- **Human URL:** [https://akabab.github.io/superhero-api/api/](https://akabab.github.io/superhero-api/api/)
-- **Base URL:** `https://akabab.github.io/superhero-api/api`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Superheroes Agentic Access](https://apis.io/agentic-access/superheroes/superheroes-agentic-access/)
 
-- Games And Comics
-- Superheroes
+#### JSON Schema (7)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://akabab.github.io/superhero-api/api/)
-- [Source Code](https://github.com/akabab/superhero-api)
-- [OpenAPI](openapi/superheroes-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/superheroes.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/superheroes.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Appearance](https://apis.io/schemas/superheroes/superheroes-appearance/)
+- [Biography](https://apis.io/schemas/superheroes/superheroes-biography/)
+- [Character](https://apis.io/schemas/superheroes/superheroes-character/)
+- [Connections](https://apis.io/schemas/superheroes/superheroes-connections/)
+- [Images](https://apis.io/schemas/superheroes/superheroes-images/)
+- [Powerstats](https://apis.io/schemas/superheroes/superheroes-powerstats/)
+- [Work](https://apis.io/schemas/superheroes/superheroes-work/)
 
-## Common Properties
+#### JSON Structure (1)
+
+Data models expressed in JSON Structure.
+
+- [Superheroes Character Structure](https://apis.io/json-structure/superheroes/superheroes-character-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Superheroes Context](https://apis.io/jsonld/superheroes/superheroes-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Superhero API Vocabulary](https://apis.io/vocabularies/superheroes/superheroes-vocabulary/)
+
+#### Examples (2)
+
+Example requests and responses.
+
+- [Superheroes Character Example](https://apis.io/examples/superheroes/superheroes-character-example/)
+- [Superheroes Powerstats Example](https://apis.io/examples/superheroes/superheroes-powerstats-example/)
+
+#### Collections (8)
+
+Postman and Open Collection request collections.
+
+- [Superhero API (akabab)](https://apis.io/collections/superheroes/open-superheroes/)
+- [Superhero API (akabab) Appearance API](https://apis.io/collections/superheroes/open-superheroes-appearance-api/)
+- [Superhero API (akabab) Appearance Biography API](https://apis.io/collections/superheroes/open-superheroes-biography-api/)
+- [Superhero API (akabab) Appearance Characters API](https://apis.io/collections/superheroes/open-superheroes-characters-api/)
+- [Superhero API (akabab) Appearance Connections API](https://apis.io/collections/superheroes/open-superheroes-connections-api/)
+- [Superhero API (akabab) Appearance Images API](https://apis.io/collections/superheroes/open-superheroes-images-api/)
+- [Superhero API (akabab) Appearance Powerstats API](https://apis.io/collections/superheroes/open-superheroes-powerstats-api/)
+- [Superhero API (akabab) Appearance Work API](https://apis.io/collections/superheroes/open-superheroes-work-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Superhero API (akabab) — jsonschema rules](https://apis.io/rules/superheroes/superheroes-jsonschema-spectral-rules/)
+- [Superhero API (akabab) API Rules](https://apis.io/rules/superheroes/superheroes-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Superheroes Domain Security](https://apis.io/security/superheroes/superheroes-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Superheroes Plans Pricing](https://apis.io/plans/superheroes/superheroes-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Superheroes Rate Limits](https://apis.io/rate-limits/superheroes/superheroes-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://akabab.github.io/superhero-api/api/)
-- [Source Code](https://github.com/akabab/superhero-api)
-- [GitHub Organization](https://github.com/akabab)
-- [License](https://github.com/akabab/superhero-api/blob/master/LICENSE)
-- [C D N](https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/)
-- [Original Source](https://superheroapi.com)
-- [Public APIs Listing](https://github.com/public-apis/public-apis)
-- [Spectral Rules](rules/superheroes-rules.yml)
-- [Vocabulary](vocabulary/superheroes-vocabulary.yml)
-- [JSON-LD](json-ld/superheroes-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/superheroes-character-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/superheroes-powerstats-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/superheroes-appearance-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/superheroes-biography-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/superheroes-work-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/superheroes-connections-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/superheroes-images-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/superheroes-character-structure.json)
-- [Example](examples/superheroes-character-example.json)
-- [Example](examples/superheroes-all-example.json)
-- [Example](examples/superheroes-powerstats-example.json)
-- [Rate Limits](rate-limits/superheroes-rate-limits.yml)
-- [Plans](plans/superheroes-plans-pricing.yml)
+- [GitHub](https://github.com/akabab)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 27.0** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 55.0 |
+| Contract governance | 27.3 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 5.3 |
+
+**Agent readiness 20.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/superheroes/](https://apis.io/providers/superheroes/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Superhero API (akabab): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/superheroes/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
